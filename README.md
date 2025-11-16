@@ -1,4 +1,4 @@
-📊 WNBA 2025 Player Performance Analysis
+# 📊 WNBA 2025 Player Performance Analysis
 Predicting Player Scoring Using Machine Learning
 
 This project analyzes WNBA 2025 player box score data and builds a machine learning model to predict player scoring performance. The project includes full data cleaning, exploratory data analysis (EDA), feature engineering, model comparison, and an optional interactive Streamlit app for real-time predictions.
@@ -16,7 +16,7 @@ The project satisfies the full capstone requirements:
 wnba-capstone/
 Need to lay this out here
 
-📥 1. Data Source
+# 📥 1. Data Source
 
 This project uses the player box score dataset for the 2025 WNBA season, obtained from the open-source:
 
@@ -27,7 +27,7 @@ Dataset Used: player_box_2025.csv
 Records: ~4,700 player-game rows
 Attributes: 16 cleaned and feature-engineered performance fields
 
-🧼 2. Data Cleaning & Preparation
+# 🧼 2. Data Cleaning & Preparation
 
 The notebook performs:
 
@@ -55,7 +55,7 @@ Final cleaned dataset with 16 essential features
 
 A complete cleaning workflow diagram is included in the Overleaf report.
 
-🔍 3. Exploratory Data Analysis (EDA)
+# 🔍 3. Exploratory Data Analysis (EDA)
 
 The notebook explores:
 
@@ -73,7 +73,7 @@ Shot efficiency vs. scoring output
 
 All visualizations are generated using Matplotlib.
 
-🤖 4. Machine Learning Modeling
+# 🤖 4. Machine Learning Modeling
 
 Two models were implemented:
 
@@ -96,7 +96,7 @@ MAE
 Random Forest consistently produced higher performance.
 
 
-▶️ 5. How to Run the Notebook
+# ▶️ 5. How to Run the Notebook
 1. Clone the repository
 git clone https://github.com/mindy0cruz/wnba-capstone.git
 cd wnba-capstone
@@ -133,7 +133,7 @@ Win/loss
 
 Team context
 
-📄 7. Deliverables
+# 📄 7. Deliverables
 
 ✔ Jupyter Notebook (wnba.ipynb)
 ✔ Cleaned dataset
