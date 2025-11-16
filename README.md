@@ -87,11 +87,11 @@ Advanced model used as the primary predictive method.
 
 Metrics compared:
 
-R²
+- R²
 
-RMSE
+- RMSE
 
-MAE
+- MAE
 
 Random Forest consistently produced higher performance.
 
@@ -107,31 +107,31 @@ pip install -r requirements.txt
 3. Open the notebook
 jupyter notebook notebooks/wnba.ipynb
 
-📘 6. Project Goals
+# 📘 6. Project Goals
 
 This project investigates:
 
-Key Question
+Key Question:
 
-What factors most strongly influence WNBA player scoring performance in the 2025 season?
+- What factors most strongly influence WNBA player scoring performance in the 2025 season?
 
 Dependent Variable
 
 points (game-level scoring)
 
-Independent Variables
+Independent Variables:
 
-Minutes played
+- Minutes played
 
-Shooting percentages
+- Shooting percentages
 
-Assists, rebounds, steals, blocks
+- Assists, rebounds, steals, blocks
 
-Turnovers
+- Turnovers
 
-Win/loss
+- Win/loss
 
-Team context
+- Team context
 
 # 📄 7. Deliverables
 
