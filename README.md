@@ -16,6 +16,108 @@ The project satisfies the full capstone requirements:
 wnba-capstone/
 Need to lay this out here
 
+
+# Setting up your Machine and Project
+Complete each step in the following guide and verfiy carefully.
+- [Setup Machine](SET_UP_MACHINE.md)
+
+After your machine is set up, set up a new Python project by copying this template. Complete each step in the following guide.
+- [Setup Project](SET_UP_PROJECT.md)
+
+It includes the critical commands to set up your local environment (and activate it):
+
+uv venv
+uv python pin 3.12
+uv sync --extra dev --extra docs --upgrade
+uv run pre-commit install
+uv run python --version
+Windows (PowerShell):
+
+.\.venv\Scripts\activate
+macOS / Linux / WSL:
+
+source .venv/bin/activate
+
+# Daily Workflow
+Please ensure that the prior steps have been verified before continuing. When working on a project, we open just that project in VS Code.
+
+## Git Pull from GitHub
+Always start with git pull to check for any changes made to the GitHub repo.
+
+git pull
+
+## Run Checks as You Work
+This mirrors real work where we typically:
+
+Update dependencies (for security and compatibility).
+Clean unused cached packages to free space.
+Use git add . to stage all changes.
+Run ruff and fix minor issues.
+Update pre-commit periodically.
+Run pre-commit quality checks on all code files (twice if needed, the first pass may fix things).
+Run tests.
+In VS Code, open your repository, then open a terminal (Terminal / New Terminal) and run the following commands one at a time to check the code.
+
+uv sync --extra dev --extra docs --upgrade
+uv cache clean
+git add .
+uvx ruff check --fix
+uvx pre-commit autoupdate
+uv run pre-commit run --all-files
+git add .
+uv run pytest
+NOTE: The second git add . ensures any automatic fixes made by Ruff or pre-commit are included before testing or committing.
+
+
+
+## Build Project Documentation
+Make sure you have current doc dependencies, then build your docs, fix any errors, and serve them locally to test.
+
+uv run mkdocs build --strict
+uv run mkdocs serve
+After running the serve command, the local URL of the docs will be provided. To open the site, press CTRL and click the provided link (at the same time) to view the documentation. On a Mac, use CMD and click.
+Press CTRL c (at the same time) to stop the hosting process.
+
+## Execute
+This project includes demo code. Run the demo Python modules to confirm everything is working.
+
+In VS Code terminal, run:
+
+uv run python -m analytics_project.demo_module_basics
+uv run python -m analytics_project.demo_module_languages
+uv run python -m analytics_project.demo_module_stats
+uv run python -m analytics_project.demo_module_viz
+You should see:
+
+Log messages in the terminal
+Greetings in several languages
+Simple statistics
+A chart window open (close the chart window to continue).
+If this works, your project is ready! If not, check:
+
+Are you in the right folder? (All terminal commands are to be run from the root project folder.)
+Did you run the full uv sync --extra dev --extra docs --upgrade command?
+Are there any error messages? (ask for help with the exact error)
+
+## Git add-commit-push to GitHub
+Anytime we make working changes to code is a good time to git add-commit-push to GitHub.
+
+Stage your changes with git add.
+Commit your changes with a useful message in quotes.
+Push your work to GitHub.
+git add .
+git commit -m "describe your change in quotes"
+git push -u origin main
+This will trigger the GitHub Actions workflow and publish your documentation via GitHub Pages.
+
+## Modify and Debug
+With a working version safe in GitHub, start making changes to the code.
+
+Before starting a new session, remember to do a git pull and keep your tools updated.
+
+Each time forward progress is made, remember to git add-commit-push.
+
+
 # 📥 1. Data Source
 
 This project uses the player box score dataset for the 2025 WNBA season, obtained from the open-source:
@@ -59,19 +161,19 @@ A complete cleaning workflow diagram is included in the Overleaf report.
 
 The notebook explores:
 
-Distribution of game-level scoring
+- Distribution of game-level scoring
 
-Correlations between performance metrics
+- Correlations between performance metrics
 
-Relationship between minutes and scoring
+- Relationship between minutes and scoring
 
-Top scoring players of 2025
+- Top scoring players of 2025
 
-Rolling player trends
+- Rolling player trends
 
-Shot efficiency vs. scoring output
+- Shot efficiency vs. scoring output
 
-All visualizations are generated using Matplotlib.
+- All visualizations are generated using Matplotlib.
 
 # 🤖 4. Machine Learning Modeling
 
@@ -79,11 +181,11 @@ Two models were implemented:
 
 Model 1 — Linear Regression
 
-Used as a baseline scoring prediction model.
+- Used as a baseline scoring prediction model.
 
 Model 2 — Random Forest Regressor
 
-Advanced model used as the primary predictive method.
+- Advanced model used as the primary predictive method.
 
 Metrics compared:
 
@@ -115,7 +217,7 @@ Key Question:
 
 - What factors most strongly influence WNBA player scoring performance in the 2025 season?
 
-Dependent Variable
+Dependent Variable:
 
 points (game-level scoring)
 
