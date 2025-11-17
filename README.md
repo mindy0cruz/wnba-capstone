@@ -26,6 +26,7 @@ After your machine is set up, set up a new Python project by copying this templa
 
 It includes the critical commands to set up your local environment (and activate it):
 
+'''powershell
 uv venv
 uv python pin 3.12
 uv sync --extra dev --extra docs --upgrade
@@ -33,11 +34,12 @@ uv run pre-commit install
 uv run python --version
 Windows (PowerShell):
 
+
 .\.venv\Scripts\activate
 macOS / Linux / WSL:
 
 source .venv/bin/activate
-
+'''
 
 # Daily Workflow
 Please ensure that the prior steps have been verified before continuing. When working on a project, we open just that project in VS Code.
