@@ -1,4 +1,4 @@
-# pyproject.toml: Modern Python project configuration
+# pyproject.toml: WNBA Predictions
 
 # Replaces requirements.txt, setup.py, and multiple config files
 # This ONE file manages dependencies, tools, and standards
@@ -32,10 +32,10 @@ dependencies = [ # fmt: off
 ]  # fmt: on
 
 [project.urls]
-"Bug Tracker" = "https://github.com/denisecase/pro-analytics-02-starter/issues"
-Documentation = "https://denisecase.github.io/pro-analytics-02-starter/"
-Homepage = "https://github.com/denisecase/pro-analytics-02-starter"
-Repository = "https://github.com/denisecase/pro-analytics-02-starter"
+"Bug Tracker" = " "
+Documentation = "https://github.com/mindy0cruz/wnba-capstone"
+Homepage = "https://github.com/mindy0cruz/wnba-capstone"
+Repository = "https://github.com/mindy0cruz/wnba-capstone"
 
 [project.optional-dependencies]
 dev = [
