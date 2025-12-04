@@ -248,7 +248,6 @@ Metrics compared:
 
 - RMSE
 
-- MAE
 
 Random Forest consistently produced higher performance.
 
